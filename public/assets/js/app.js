@@ -26,12 +26,14 @@ $(sBtn).on('click', function () {
         console.log(rslt);
         console.log('you found ' + rslt.resultCount + ' results!');
         for (var i = 0; i < rslt.resultCount; i++){
-            console.log(rslt.results[i]);
-            renderer(rslt.results[i], i);
+            console.log(response.results[i]);
+            renderer(response.results[i], i);
         };
     });
 });
+
 function renderer(res, num){
+    console.log('renderer')
     var div = $('<div id = \'result' + num + '\' class = \'text-left\'></div>');
     var pic = $('<img src = \'' + res.artworkUrl100 + '\' class = \'rounded float-left\'>')
     var title = res.trackName;
@@ -44,8 +46,11 @@ function renderer(res, num){
         
     // }
     var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> ');
-    template += '<p>' + feedLink + '</p><p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr>'
+    template += '<p>' + feedLink + '</p>'
+    template += '<p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>'
+    
     $(pic).appendTo(div);
     $(template).appendTo(div);
+    console.log(div);
     $(div).appendTo(rsltDiv);
 };
