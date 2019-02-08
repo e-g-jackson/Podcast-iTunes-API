@@ -33,7 +33,7 @@ $(sBtn).on('click', function () {
 });
 
 function renderer(res, num){
-    console.log('renderer')
+    console.log(res)
     var div = $('<div id = \'result' + num + '\' class = \'text-left\'></div>');
     var pic = $('<img src = \'' + res.artworkUrl100 + '\' class = \'rounded float-left\'>')
     var title = res.trackName;
