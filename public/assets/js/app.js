@@ -23,11 +23,13 @@ $(sBtn).on('click', function () {
         method: 'GET'
     }).then(function (response) {
         var rslt = JSON.parse(response);
+        
         console.log(rslt);
         console.log('you found ' + rslt.resultCount + ' results!');
+        
+        $(rsltDiv).empty();
         for (var i = 0; i < rslt.resultCount; i++){
             console.log(rslt.results[i]);
-            $(rsltDiv).empty();
             renderer(rslt.results[i], i);
         };
     });
