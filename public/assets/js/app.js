@@ -27,15 +27,12 @@ $(sBtn).on('click', function () {
         console.log('you found ' + rslt.resultCount + ' results!');
         for (var i = 0; i < rslt.resultCount; i++){
             console.log(rslt.results[i]);
-            // $(rsltDiv).append("This works!");
             renderer(rslt.results[i], i);
         };
     });
 });
 
 function renderer(res, num){
-    console.log(res)
-    // $(rsltDiv).append("This works too!")
     var div = $('<div id = \'result' + num + '\' class = \'text-left\'></div>');
     var pic = $('<img src = \'' + res.artworkUrl100 + '\' class = \'rounded float-left\'>')
     var title = res.trackName;
@@ -43,7 +40,7 @@ function renderer(res, num){
     var genre = res.genres;
     var genreP = '<p>Genre: <strong>' + genre.join(', ') + '</strong></p>';
     var link = res.trackViewUrl;
-    var feedLink = '<a href = ' + res.feedURL + '>Feed URL</a>';
+    var feedLink = '<a href = ' + res.feedURL + '><button class = \'btn btn-primary\'>Subscribe!</button></a>';
     // for ( var j = 0; j < genre.length; j++){
         
     // }
@@ -53,6 +50,5 @@ function renderer(res, num){
     
     $(pic).appendTo(div);
     $(template).appendTo(div);
-    console.log(div);
     $(rsltDiv).append(div);
 };
