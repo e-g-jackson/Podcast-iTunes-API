@@ -26,8 +26,8 @@ $(sBtn).on('click', function () {
         console.log(rslt);
         console.log('you found ' + rslt.resultCount + ' results!');
         for (var i = 0; i < rslt.resultCount; i++){
-            console.log(response.results[i]);
-            renderer(response.results[i], i);
+            console.log(rslt.results[i]);
+            renderer(rslt.results[i], i);
         };
     });
 });
