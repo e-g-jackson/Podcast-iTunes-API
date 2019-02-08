@@ -27,6 +27,7 @@ $(sBtn).on('click', function () {
         console.log('you found ' + rslt.resultCount + ' results!');
         for (var i = 0; i < rslt.resultCount; i++){
             console.log(rslt.results[i]);
+            $(rsltDiv).append("This works!");
             renderer(rslt.results[i], i);
         };
     });
@@ -34,6 +35,7 @@ $(sBtn).on('click', function () {
 
 function renderer(res, num){
     console.log(res)
+    $(rsltDiv).append("This works too!")
     var div = $('<div id = \'result' + num + '\' class = \'text-left\'></div>');
     var pic = $('<img src = \'' + res.artworkUrl100 + '\' class = \'rounded float-left\'>')
     var title = res.trackName;
