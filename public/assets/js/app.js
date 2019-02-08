@@ -39,12 +39,12 @@ function renderer(res, num){
     var author = res.artistName;
     var genre = res.genres;
     var genreP = '<p>Genre: <strong>' + genre.join(', ') + '</strong></p>';
-    var link = res.trackViewUrl;
+    var link = '<button class = \'btn btn-primary\'>' + res.trackViewUrl + '</button>';
     var feedLink = '<a href = ' + res.feedURL + '><button class = \'btn btn-primary\'>Subscribe!</button></a>';
     // for ( var j = 0; j < genre.length; j++){
         
     // }
-    var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> <p>' + feedLink + '</p><p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>');
+    var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> <p>' + feedLink + '</p><p><a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>');
     // template += '<p>' + feedLink + '</p>'
     // template += '<p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>'
     
