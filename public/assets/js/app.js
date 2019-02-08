@@ -45,7 +45,7 @@ function renderer(res, num){
     // for ( var j = 0; j < genre.length; j++){
         
     // }
-    var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> <div class = \'buttonsDiv\'>' + feedLink + link'</div><hr>');
+    var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> <div class = \'buttonsDiv\'>' + feedLink + link + '</div><hr>');
     // template += '<p>' + feedLink + '</p>'
     // template += '<p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>'
     
