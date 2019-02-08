@@ -23,7 +23,7 @@ $(sBtn).on('click', function () {
         method: 'GET'
     }).then(function (response) {
         var rslt = JSON.parse(response);
-        
+
         console.log(rslt);
         console.log('you found ' + rslt.resultCount + ' results!');
         
@@ -43,7 +43,7 @@ function renderer(res, num){
     var genre = res.genres;
     var genreP = '<p>Genre: <strong>' + genre.join(', ') + '</strong></p>';
     var link = '<a href = \'' + res.trackViewUrl + '\'><button class = \'btn btn-sm btn-secondary mx-2\'>iTunes Page</button></a>';
-    var feedLink = '<a href = ' + res.feedUrl + '><button class = \'btn btn-sm btn-secondary mx-2\'>Subscribe!</button></a>';
+    var feedLink = '<a href = ' + res.feedUrl + '><button class = \'btn btn-sm btn-secondary mx-2\'>RSS</button></a>';
     var template = $('<p>Podcast Title: <strong>' + title + '</strong></p> ' + genreP + ' <p>Author: <strong>' + author + '</strong></p> <div class = \'buttonsDiv\'>' + feedLink + link + '</div><hr>');
     // template += '<p>' + feedLink + '</p>'
     // template += '<p>Link: <a href = \'' + link + '\'<em>' + link + '</em></a></p> <hr></hr>'
